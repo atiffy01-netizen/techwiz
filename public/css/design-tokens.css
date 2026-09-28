@@ -1,0 +1,208 @@
+/* ============================================================
+   CAMPUS COIN — DESIGN TOKENS v2.0
+   Modern Indigo/Purple/Cyan Student Fintech Design System
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+:root {
+  /* ---- BRAND CORE (Campus Coin Unified Palette) ---- */
+  --cc-primary:          #6366F1;   /* Indigo */
+  --cc-primary-hover:    #4F46E5;
+  --cc-primary-glow:     rgba(99,102,241,.35);
+  --cc-primary-light:    rgba(99,102,241,.12);
+
+  --cc-purple:           #7C3AED;   /* Purple */
+  --cc-purple-hover:     #6D28D9;
+  --cc-purple-glow:      rgba(124,58,237,.35);
+  --cc-purple-light:     rgba(124,58,237,.12);
+
+  --cc-violet:           #8B5CF6;   /* Violet */
+  --cc-violet-hover:     #7C3AED;
+  --cc-violet-glow:      rgba(139,92,246,.3);
+  --cc-violet-light:     rgba(139,92,246,.12);
+
+  --cc-cyan:             #06B6D4;   /* Cyan accent */
+  --cc-cyan-hover:       #0891B2;
+  --cc-cyan-glow:        rgba(6,182,212,.3);
+  --cc-cyan-light:       rgba(6,182,212,.12);
+
+  --cc-blue:             #3B82F6;   /* Sky Blue */
+  --cc-blue-hover:       #2563EB;
+  --cc-blue-glow:        rgba(59,130,246,.3);
+  --cc-blue-light:       rgba(59,130,246,.12);
+
+  /* Fallback aliases for backward compatibility */
+  --cc-accent-teal:      var(--cc-cyan);
+
+  /* ---- SEMANTIC COLORS (Preserved for status / financial indicators) ---- */
+  --cc-income:           #10B981;   /* Emerald green (financial positive only) */
+  --cc-income-bg:        rgba(16,185,129,.14);
+  --cc-expense:          #F43F5E;   /* Rose red (expense / danger) */
+  --cc-expense-bg:       rgba(244,63,94,.14);
+  --cc-warning:          #F59E0B;   /* Amber */
+  --cc-warning-bg:       rgba(245,158,11,.14);
+  --cc-info:             #06B6D4;
+  --cc-info-bg:          rgba(6,182,212,.14);
+  --cc-danger:           #EF4444;
+
+  /* ---- TYPOGRAPHY ---- */
+  --cc-font-body:    'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --cc-font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --cc-font-mono:    'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+
+  /* ---- TYPE SCALE ---- */
+  --fs-2xs:   0.6875rem;
+  --fs-xs:    0.75rem;
+  --fs-sm:    0.875rem;
+  --fs-base:  1rem;
+  --fs-md:    1.0625rem;
+  --fs-lg:    1.125rem;
+  --fs-xl:    1.25rem;
+  --fs-2xl:   1.5rem;
+  --fs-3xl:   1.875rem;
+  --fs-4xl:   2.25rem;
+  --fs-5xl:   3rem;
+
+  /* ---- FONT WEIGHTS ---- */
+  --fw-light:     300;
+  --fw-normal:    400;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+  --fw-bold:      700;
+  --fw-extrabold: 800;
+
+  /* ---- SPACING ---- */
+  --sp-xs:  0.375rem;
+  --sp-sm:  0.625rem;
+  --sp-md:  1rem;
+  --sp-lg:  1.5rem;
+  --sp-xl:  2rem;
+  --sp-2xl: 3rem;
+  --sp-3xl: 4rem;
+
+  /* ---- BORDER RADIUS ---- */
+  --radius-xs:   4px;
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   16px;
+  --radius-xl:   20px;
+  --radius-2xl:  28px;
+  --radius-full: 9999px;
+
+  /* Legacy radius token aliases */
+  --cc-radius-sm: var(--radius-sm);
+  --cc-radius-md: var(--radius-md);
+  --cc-radius-lg: var(--radius-lg);
+  --cc-radius-xl: var(--radius-xl);
+
+  /* ---- Z-INDEX ---- */
+  --z-base:     0;
+  --z-raised:   10;
+  --z-dropdown: 200;
+  --z-sticky:   300;
+  --z-overlay:  400;
+  --z-modal:    500;
+  --z-toast:    600;
+
+  /* ---- TRANSITIONS ---- */
+  --t-fast:   120ms ease;
+  --t-normal: 220ms ease;
+  --t-slow:   380ms ease;
+  --t-spring: 300ms cubic-bezier(0.34,1.56,0.64,1);
+}
+
+/* ============================================================
+   LIGHT THEME (High Contrast & Clean Hierarchy)
+   ============================================================ */
+[data-theme="light"] {
+  --cc-surface-base:    #F8FAFC;
+  --cc-surface-card:    rgba(255,255,255,0.92);
+  --cc-surface-subtle:  #F1F5F9;
+  --cc-surface-tint:    rgba(99,102,241,0.05);
+  --cc-surface-glass:   rgba(255,255,255,0.8);
+  --cc-surface:         var(--cc-surface-card);
+
+  --cc-border-subtle:   rgba(99,102,241,0.12);
+  --cc-border-medium:   rgba(99,102,241,0.22);
+  --cc-border-strong:   rgba(99,102,241,0.32);
+  --cc-border-glass:    rgba(255,255,255,0.6);
+  --cc-border:          #E2E8F0;
+
+  --cc-text-main:       #0F172A;   /* Slate 900 */
+  --cc-text-secondary:  #475569;   /* Slate 600 (Accessible 5.8:1) */
+  --cc-text-muted:      #64748B;   /* Slate 500 (Accessible 4.6:1 WCAG AA) */
+
+  --cc-sidebar-bg:      #0B0F1E;
+  --cc-sidebar-text:    rgba(255,255,255,0.72);
+  --cc-sidebar-active:  var(--cc-primary);
+  --cc-sidebar-hover:   rgba(255,255,255,0.08);
+  --cc-sidebar-border:  rgba(255,255,255,0.08);
+
+  --cc-shadow-sm:       0 1px 3px rgba(15,23,42,0.06), 0 1px 2px rgba(15,23,42,0.04);
+  --cc-shadow-md:       0 4px 16px rgba(15,23,42,0.08), 0 2px 6px rgba(15,23,42,0.05);
+  --cc-shadow-lg:       0 12px 40px rgba(15,23,42,0.1),  0 4px 16px rgba(15,23,42,0.06);
+  --cc-shadow-brand:    0 4px 24px var(--cc-primary-glow);
+  --cc-shadow-blue:     0 4px 24px var(--cc-blue-glow);
+  --cc-shadow-glow:     0 0 40px rgba(99,102,241,.15), 0 8px 32px rgba(15,23,42,0.08);
+
+  --cc-topbar-bg:       rgba(248,250,252,0.92);
+  --cc-topbar-border:   rgba(99,102,241,0.12);
+  --cc-input-bg:        #FFFFFF;
+  --cc-input-border:    #CBD5E1;
+
+  /* Background mesh */
+  --cc-orb-1: radial-gradient(ellipse 600px 400px at 20% 30%, rgba(99,102,241,.08) 0%, transparent 70%);
+  --cc-orb-2: radial-gradient(ellipse 500px 350px at 80% 20%, rgba(124,58,237,.06) 0%, transparent 70%);
+  --cc-orb-3: radial-gradient(ellipse 400px 300px at 60% 80%, rgba(6,182,212,.05) 0%, transparent 70%);
+}
+
+/* ============================================================
+   DARK THEME (High Contrast & Deep Rich Glassmorphism)
+   ============================================================ */
+[data-theme="dark"] {
+  --cc-surface-base:    #070B18;
+  --cc-surface-card:    rgba(15,23,42,0.85);
+  --cc-surface-subtle:  #161F38;
+  --cc-surface-tint:    rgba(99,102,241,0.08);
+  --cc-surface-glass:   rgba(15,23,42,0.7);
+  --cc-surface:         var(--cc-surface-card);
+
+  --cc-border-subtle:   rgba(148,163,184,0.14);
+  --cc-border-medium:   rgba(148,163,184,0.22);
+  --cc-border-strong:   rgba(148,163,184,0.32);
+  --cc-border-glass:    rgba(255,255,255,0.1);
+  --cc-border:          rgba(148,163,184,0.16);
+
+  --cc-text-main:       #F8FAFC;   /* Crisp Slate 50 (High contrast) */
+  --cc-text-secondary:  #CBD5E1;   /* Slate 300 (Clear readable body) */
+  --cc-text-muted:      #94A3B8;   /* Slate 400 (Clear readable captions/labels, >6:1 contrast) */
+
+  --cc-sidebar-bg:      #050810;
+  --cc-sidebar-text:    rgba(255,255,255,0.7);
+  --cc-sidebar-active:  var(--cc-primary);
+  --cc-sidebar-hover:   rgba(255,255,255,0.07);
+  --cc-sidebar-border:  rgba(255,255,255,0.08);
+
+  --cc-shadow-sm:       0 1px 4px rgba(0,0,0,0.5),  0 1px 2px rgba(0,0,0,0.35);
+  --cc-shadow-md:       0 4px 16px rgba(0,0,0,0.55), 0 2px 8px rgba(0,0,0,0.35);
+  --cc-shadow-lg:       0 12px 40px rgba(0,0,0,0.65), 0 4px 16px rgba(0,0,0,0.4);
+  --cc-shadow-brand:    0 4px 24px var(--cc-primary-glow);
+  --cc-shadow-blue:     0 4px 24px var(--cc-blue-glow);
+  --cc-shadow-glow:     0 0 60px rgba(99,102,241,.2), 0 8px 40px rgba(0,0,0,0.4);
+
+  --cc-topbar-bg:       rgba(7,11,24,0.9);
+  --cc-topbar-border:   rgba(148,163,184,0.14);
+  --cc-input-bg:        rgba(15,23,42,0.9);
+  --cc-input-border:    rgba(148,163,184,0.25);
+
+  --cc-income-bg:       rgba(16,185,129,.18);
+  --cc-expense-bg:      rgba(244,63,94,.18);
+  --cc-warning-bg:      rgba(245,158,11,.18);
+  --cc-info-bg:         rgba(6,182,212,.18);
+
+  /* Background mesh */
+  --cc-orb-1: radial-gradient(ellipse 700px 500px at 20% 30%, rgba(99,102,241,.16) 0%, transparent 70%);
+  --cc-orb-2: radial-gradient(ellipse 600px 400px at 80% 20%, rgba(124,58,237,.14) 0%, transparent 70%);
+  --cc-orb-3: radial-gradient(ellipse 500px 350px at 60% 80%, rgba(6,182,212,.08) 0%, transparent 70%);
+}
